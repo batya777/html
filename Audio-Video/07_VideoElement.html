@@ -7,21 +7,21 @@
 </head>
 <body>
 	<video id="video" style="border: 2px solid gray; cursor: pointer;">
-		<source src="video/vsvideo.mp4" />
+		<source src="videoplay.mp4" />
 		<source src="video/vsvideo.ogg" />
 		<source src="video/vsvideo.webm" />
 	</video>
 
 	<script>
 		window.onload = function() {
-			var videoElem = document.getElementByID("video");
+			var videoElem = document.getElementById("video");
 
 			// устанавливаем размер элемента на странице как половина высоты и ширины видеозаписи
 			videoElem.width = videoElem.videoWidth / 2;
 			videoElem.height = videoElem.videoHeight / 2;
 
 			// запускаем видео при наведении курсора
-			videoElem.onmouseover = funnction () {
+			videoElem.onmouseover = function () {
 				this.play();
 			}
 
